@@ -45,7 +45,7 @@ drawArrow = @(a,b,varargin) ...
 
 fontSize = 18;
 arrowsHeadSize = 0.2;
-figure('Name', 'Forces');
+figure('Name', 'Final state');
 hold on;
 
 % sail position
