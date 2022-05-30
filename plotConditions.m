@@ -11,7 +11,7 @@ hold on;
 
 % sail position
 plot([-0.8*cosd(delta_s) 0], [-0.8*sind(delta_s) 0], ...
-    'linewidth',1,'color',[0.6 0.6 0.6], 'linewidth',4);
+    'color',[0.6 0.6 0.6], 'linewidth',4);
 
 sailAngleText = sprintf('\\it\\delta_s\\rm = %.1f deg', delta_s);
 text(-0.9, -0.9, sailAngleText,'FontSize',fontSize, 'color', [1 0 0]);

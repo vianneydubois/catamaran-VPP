@@ -59,7 +59,7 @@ if plotFlags(1)
     
     % sail position
     plot([-0.8*cosd(delta_s) 0], [-0.8*sind(delta_s) 0], ...
-        'linewidth',1,'color',[0.7 0.7 0.7], 'linewidth',4);
+        'color',[0.7 0.7 0.7], 'linewidth',4);
     
     % x_b unit vector
     drawArrow([0 0], [1 0], 'linewidth',1,'color','k', ...

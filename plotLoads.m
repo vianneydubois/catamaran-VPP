@@ -3,6 +3,7 @@ function [] = plotLoads(delta, delta_s, delta_r, beta_t, Vwt, Vbh)
 %   Detailed explanation goes here
 
 run environment.m
+run geometry.m
 
 %% computing apparent wind
 % in the hydro frame
@@ -50,7 +51,13 @@ hold on;
 
 % sail position
 plot([-0.8*cosd(delta_s) 0], [-0.8*sind(delta_s) 0], ...
-    'linewidth',1,'color',[0.7 0.7 0.7], 'linewidth',4);
+    'color',[0.7 0.7 0.7], 'linewidth',4);
+
+% rudders position
+%plot([r_le_root(1)  r_le_root(1)-r_root*cosd(delta_r)]./h_length/*2,...
+%    [r_le_root(2)  r_le_root(2)+r_root*sind(delta_r)]./h_length.*2, ...
+%    'linewidth',1,'color',[0.7 0.7 0.7], 'linewidth',4);
+
 
 % x_b unit vector
 drawArrow([0 0], [1 0], 'linewidth',1,'color','k', ...
