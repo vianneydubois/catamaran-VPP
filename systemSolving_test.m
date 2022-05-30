@@ -11,7 +11,7 @@ close all;
 
 %% plot flags
 plotFlags = [
-    1 % initial conditions
+    0 % initial conditions
     1 % final conditions and forces
     ];
 

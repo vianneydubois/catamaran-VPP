@@ -126,15 +126,16 @@ text(cosd(beta)/2+0.05, sind(beta)/2, appWindText, ...
 text(+0.2, -0.9, sprintf('\\itV_{boat}\\rm = %.1f kts', Vbh*3.6/1.852), ...
     'FontSize',fontSize, 'color', [1 0 0]);
 
-xlim([-1, 1]);
-ylim([-1, 1]);
-axis equal;
-set(gca, 'YDir', 'reverse');
-
 
 % backgroung image
-h = image([-0.9 0.9],[-0.9 0.9],imread('top_view.png'));
-uistack(h,'bottom')
+%h = image([-0.9 0.9],[-0.9 0.9],imread('top_view.png'));
+h = image([-1 1],[-1 1],imread('top_view.png'));
+uistack(h,'bottom');
+
+xlim([-1, 1]);
+ylim([-1.1, 1.1]);
+axis equal;
+set(gca, 'YDir', 'reverse');
 
     
 end
