@@ -21,7 +21,7 @@ s_area = area(polyshape(s_x, s_z));
 %% HULLS GEOMETRY
 h_width = 0.48;
 h_spacing = 2.4 - 2*h_width/2;
-h_bow_tip = [2.50 h_spacing/2 0.];
+h_bow_tip = [2.40 h_spacing/2 0.];
 h_length = 4.80;
 h_bow_height = 0.40;
 h_stern_height = 0.30;
@@ -46,7 +46,7 @@ d_z = d_le_root(3) + [0. d_length d_length 0.];
 d_area = area(polyshape(d_x, d_z));
 
 %% RUDDER GEOMETRY
-r_le_root = [-2.30 h_spacing/2 0.30];
+r_le_root = [h_bow_tip(1)-h_length h_spacing/2 0.30];
 r_root = 0.20;
 r_length = 0.60;
 r_tip = 0.20;
