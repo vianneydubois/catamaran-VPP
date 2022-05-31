@@ -62,6 +62,9 @@ plot([r_le_root(1)  r_le_root(1)-r_root*cosd(delta_r)]./h_length.*1.8,...
 plot([r_le_root(1)  r_le_root(1)-r_root*cosd(delta_r)]./h_length.*1.8,...
     [-r_le_root(2)  -r_le_root(2)+r_root*sind(delta_r)]./h_length.*1.8, ...
     'color',[0.5 0.7 0.2], 'linewidth',3);
+% angle
+rudderText = sprintf('\\it\\delta_r\\rm = %.1f°', delta_r);
+text(-1, -0.6, rudderText,'FontSize',fontSize, 'color', [0.5 0.7 0.2]);
 
 % x_b unit vector
 drawArrow([0 0], [1 0], 'linewidth',1,'color','k', ...
@@ -111,7 +114,7 @@ text(Fh_norm(1), Fh_norm(2)/2-0.1, '\itF_h','FontSize',fontSize, ...
     'color', [0.4 0.4 0.4]);
 
 % total force and yawing moment
-% display the force vector only if it is not null
+% display the force vector ONLY if it is not null
 if (norm(Ftot) > 0.1)
     drawArrow([0 0], Ftot_norm,'linewidth',5,'color',[1 0 0], ...
         'MaxHeadSize', arrowsHeadSize/norm(Ftot_norm));
@@ -121,8 +124,7 @@ end
 
 FtotText = sprintf('\\Sigma\\it{F}\\rm = %.1f N', norm(Ftot));
 MzText = sprintf('\\itM_z\\rm = %.1f Nm', Mz);
-text(-0.9, -0.9, {FtotText, MzText},'FontSize',fontSize, 'color', [1 0 0]);
-
+text(-1, -0.9, {FtotText, MzText},'FontSize',fontSize, 'color', [1 0 0]);
 
 % apparent wind
 appWindArrowSize = arrowsHeadSize/norm([cosd(beta) sind(beta)]);

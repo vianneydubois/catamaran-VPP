@@ -3,8 +3,7 @@
 
 % WHAT NEEDS TO BE DONE
 % - Moments are taken as equal for both hulls, and are computed using port
-% side geometry : update the moment
-% computation code
+% side geometry : update the momentcomputation code
 
 clear;
 close all;
