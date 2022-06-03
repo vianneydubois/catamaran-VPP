@@ -22,9 +22,11 @@ s_GP = -GO + s_OP;
 % daggerboard (appl. point is considered at 1/3 of the MAC (@ aero centre))
 d_taper = d_tip/d_root;
 d_MAC = 2/3 * d_root * (1+d_taper+d_taper^2) / (1+d_taper);
+% port daggerboard
+d_OP_p = d_le_root + [-1/3 * d_MAC 0 1/2*d_length];
+d_GP_p = -GO + d_OP_p;
+% starboard daggerboard
 
-d_OP = d_le_root + [-1/3 * d_MAC 0 1/2*d_length];
-d_GP = -GO + d_OP;
 
 % rudder (appl. point is considered at 1/3 of the MAC (@ aero centre))
 r_taper = r_tip/r_root;
@@ -38,7 +40,7 @@ r_GP = -GO + r_OP;
 
 %% Yawing moments
 Ms = cross(s_GP, Fs)';
-Md = 2 * cross(d_GP, Fd)';
+Md = 2 * cross(d_GP_p, Fd)';
 Mr = 2 * cross(r_GP, Fr)';
 Mh = 2 * 0 * Fh;
 
