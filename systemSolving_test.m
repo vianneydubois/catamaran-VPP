@@ -2,8 +2,8 @@
 % given true wind conditions
 
 % WHAT NEEDS TO BE DONE
-% - Moments are taken as equal for both hulls, and are computed using port
-% side geometry : update the momentcomputation code
+% - Moments are taken as equal for both hulls :
+% update the momentcomputation code
 
 clear;
 close all;
